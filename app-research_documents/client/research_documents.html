@@ -1,0 +1,24 @@
+<!-- Uses Blaze formatting and handlebars -->
+<template name="research_documents">
+	<table>
+		<thead>
+			<th>Summary</th>
+			<th>URL</th>
+			<th>Researcher(s) (Affiliation)</th>
+			<th>Date Published</th>
+		</thead>
+		<tbody>
+
+			{{#each research_document}}                     
+			<tr>
+				<td>{{summary}}</td>
+				<td>{{url}}</td>
+				<td>{{researchers}} ({{affiliation}})</td>
+				<!-- <td>{{formatDate date_published "short"}}</td> -->
+				<td>{{date_published}}</td>
+			</tr>
+			{{/each}}
+
+		</tbody>
+	</table>
+</template>

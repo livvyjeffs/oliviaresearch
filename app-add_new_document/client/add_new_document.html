@@ -1,0 +1,36 @@
+<template name="add_new_document">
+    <button id="add_new_document"></button>
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Add a new Research Document:</h4>
+                </div>
+                <form id="new_document_form">
+
+                    <div class="modal-body">
+                        <select class="type">
+                            <option value="quote">Quote</option>  
+                            <option value="article">Article</option>         
+                            <option value="research_paper">Paper</option>
+                            <option value="presentation">Presentation</option>
+                        </select>
+                        <div><input type="text" class="title" placeholder="Title" /></div>     
+                        <div><input type="text" class="summary" placeholder="Summary" /></div>
+                        <div><input type="text" class="date_published" placeholder="Date Published" /></div>
+                        <input type="text" class="url" placeholder="URL" />
+                        <div><input type="text" class="affiliation" placeholder="Affiliation" /></div>
+                        <div><input type="text" class="researchers" placeholder="Researchers" /></div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Add this Document</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,34 @@
+#speed-add{
+
+}
+
+#speed-down{
+.up{
+background-image: url('img/up.png');
+}
+
+.down{
+background-image: url('img/down.jpeg');
+}
+
+.up, .down{
+vertical-align: middle;
+display: inline-block;
+width: 12px;
+height: 12px;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+}
+}
+
+.form-container{
+display: inline-block;
+border-radius: 5px;
+padding: 10px;
+background-color: gray; 
+}
+
+.map-container{
+margin-top: 100px;
+}
