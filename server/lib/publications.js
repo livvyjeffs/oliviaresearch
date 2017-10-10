@@ -10,3 +10,7 @@ console.log('**file: server/lib/publications.js loaded');
 Meteor.publish('rdocs',function(){
 	return ResearchDocs.find();
 });
+
+Meteor.publish('affiliations',function(){
+	return AffiliationList.find();
+});

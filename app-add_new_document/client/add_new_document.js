@@ -54,10 +54,6 @@ Template.add_new_document.events({
             break;
         }
         
-    },
-    "click #add_new_document": function(event){
-        event.preventDefault();
-        Modal.show('add_new_document');
     }
 
 });

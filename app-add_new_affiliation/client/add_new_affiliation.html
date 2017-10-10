@@ -1,0 +1,34 @@
+<template name="add_new_affiliation">
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Add a new Affiliation:</h4>
+                </div>
+                <form id="new_affiliation_form">
+
+                    <div class="modal-body">
+                        <div><input type="text" class="name" placeholder="Name" /></div>     
+                        <div><input type="text" class="parent_affiliation" placeholder="Parent Affiliation" /></div>
+                        <div>
+                            {{#if parent_affiliation_called}}
+                                {{#each parent_affiliations}}
+                                <div class="matching_parent">
+                                    {{name}}
+                                </div> 
+                                {{/each}}
+                            {{/if}}
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Add this Affiliation</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</template>
