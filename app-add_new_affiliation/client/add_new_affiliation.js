@@ -8,7 +8,7 @@ Template.add_new_affiliation.events({
     console.log('adding new affiliation... (from Template.add_new_affiliation.events)')
 
     Session.set("affiliation_name", template.find(".name").value);
-    Session.set("affiliation_parent", template.find(".parent_affiliation").value);
+    // Session.set("affiliation_parent", template.find(".parent_affiliation").value);
     
     AffiliationList.insert({
         name: Session.get('affiliation_name'),
@@ -24,6 +24,7 @@ Template.add_new_affiliation.events({
     },
 
     "keyup .parent_affiliation": function(event, template) {
+        event.preventDefault();
             // when a key is pressed, search affiliation and display options
             var val = template.find(".parent_affiliation").value;
             console.log(val);
@@ -33,8 +34,16 @@ Template.add_new_affiliation.events({
                 Session.set('affiliation_queryCalled', true);  
             }
             Session.set('affiliation_query',val);
-        }
+        },
 
+        "click .matching_parent": function(event, template) {
+            event.preventDefault();
+            var text = event.target.getAttribute('value');
+            $('.matching_parent').removeClass('selected');
+            $(event.target).addClass('selected');
+            Session.set('affiliation_parent', AffiliationList.findOne({name: text}))
+
+        }
 
     });
 

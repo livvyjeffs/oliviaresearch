@@ -14,9 +14,11 @@
                         <div>
                             {{#if parent_affiliation_called}}
                                 {{#each parent_affiliations}}
-                                <div class="matching_parent">
-                                    {{name}}
-                                </div> 
+                                <div>
+                                    <div class="matching_parent" value="{{name}}">
+                                        {{name}} {{#if parent_affiliation}}({{parent_affiliation.name}}){{/if}}
+                                    </div> 
+                                </div>
                                 {{/each}}
                             {{/if}}
                         </div>
